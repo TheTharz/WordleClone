@@ -1,0 +1,245 @@
+.App {
+  text-align: center;
+  background-color: #121212;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+
+body {
+  padding: 0%;
+  margin: 0;
+}
+
+nav {
+  height: 60px;
+  width: 100%;
+  margin: 0;
+  border-bottom: 1px solid grey;
+  display: grid;
+  place-items: center;
+}
+
+nav h1 {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 45px;
+}
+.game {
+  width: 100vw;
+  /* height: calc(100vh); */
+  height:90vh;
+  display: flex;
+  align-items: center;
+  padding-top: 25px;
+  flex-direction: column;
+}
+
+.board {
+  width: 450px;
+  height: 550px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  flex: 33%;
+  display: flex;
+  flex-direction: row;
+  margin: 4px;
+}
+
+.letter {
+  flex: 33%;
+  height: 100%;
+  border: 1px solid grey;
+  margin: 4px;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  font-weight: bolder;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#correct {
+  background-color: #528d4e;
+}
+
+#almost {
+  background-color: #b49f39;
+}
+
+#error {
+  background-color: #3a393c;
+}
+
+.keyboard {
+  width: 700px;
+  height: 290px;
+  margin-top: 30px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.line1 {
+  flex: 33%;
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+.line2 {
+  flex: 33%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5px;
+}
+.line3 {
+  flex: 33%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5px;
+}
+
+.key {
+  width: 50px;
+  height: 60px;
+  margin: 5px;
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  background-color: grey;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+#big {
+  width: 100px;
+}
+#disabled {
+  background-color: #3a393c;
+}
+
+@media (max-width: 768px) {
+  .keyboard {
+    width: 100%; /* Make the width 100% on smaller screens */
+    height: auto; /* Allow the height to adjust based on content */
+    margin-top: 15px; /* Adjust the top margin as needed */
+    margin-bottom: 0.5rem; /* Adjust the bottom margin as needed */
+  }
+
+  .line1 {
+    flex: 100%; /* Occupy the full width on smaller screens */
+    flex-direction: row; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin: 10px 0; /* Adjust the margin as needed */
+  }
+
+  .line2 {
+    flex: 100%; /* Occupy the full width on smaller screens */
+    flex-direction: row; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin: 10px 0; /* Adjust the margin as needed */
+  }
+
+  .line3 {
+    flex: 100%; /* Occupy the full width on smaller screens */
+    flex-direction: row; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin: 10px 0; /* Adjust the margin as needed */
+  }
+
+  .key {
+    width: 40px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    margin: 3px; /* Adjust the margin as needed */
+    font-size: 16px; /* Adjust the font size as needed */
+  }
+
+  .letter {
+    font-size: 24px; /* Adjust the font size as needed */
+  }
+
+  .row {
+    flex: 50%; /* Adjust the flex value as needed */
+  }
+
+  .board {
+    width: 100%; /* Make the width 100% on smaller screens */
+    height: 300px; /* Allow the height to adjust based on content */
+    max-width: 450px; /* Set a maximum width for larger screens */
+    margin: 10px; /* Adjust the margin as needed */
+  }
+
+  .game {
+    height: 80vh; /* Adjust the height for smaller screens */
+    padding-top: 15px; /* Adjust the padding as needed */
+  }
+
+  .App {
+    padding: 20px; /* Adjust the padding as needed for smaller screens */
+  }
+
+  nav h1 {
+    font-size: 36px; /* Adjust the font size as needed for smaller screens */
+  }
+
+  #big {
+    width: 80px; /* Adjust the width as needed for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .letter {
+    flex: 50%; /* Adjust the flex value as needed */
+    font-size: 18px; /* Adjust the font size as needed */
+  }
+
+  .row {
+    flex: 100%; /* Occupy the full width on smaller screens */
+    flex-direction: row; /* Stack items vertically */
+    margin: 4px 16px; /* Adjust the margin as needed */
+  }
+
+  .board {
+    margin: 0px; /* Adjust the margin as needed */
+  }
+
+  .game {
+    height: 80vh; /* Adjust the height for even smaller screens */
+    padding-top: 10px; /* Adjust the padding as needed */
+  }
+
+  .App {
+    padding: 0px; /* Adjust the padding as needed for even smaller screens */
+  }
+
+  nav h1 {
+    font-size: 30px; /* Adjust the font size as needed for even smaller screens */
+  }
+
+  #big {
+    width: 60px; /* Adjust the width as needed for even smaller screens */
+  }
+
+  .key {
+    width: 30px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    margin: 2px; /* Adjust the margin as needed */
+    font-size: 14px; /* Adjust the font size as needed */
+  }
+}
+
+
